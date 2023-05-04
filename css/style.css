@@ -421,6 +421,14 @@ body {
 
 }
 
+
+@media only screen and (max-width: 428px) {
+    .modal {
+        padding: 72px 16px 24px 16px;
+        width: 392px;
+    }
+}
+
 .modal-button {
     position: absolute;
     display: flex;
@@ -730,7 +738,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 1156px) {
+@media only screen and (min-width: 1158px) {
     .main-line {
         width: calc((100% - 72px) / 4);
     }
@@ -865,6 +873,12 @@ body {
     letter-spacing: 0.02em;
     color: var(--color-adress);
     text-align: center;
+}
+
+@media only screen and (min-width: 1158px) {
+    .social-section {
+        margin-left: 120px;
+    }
 }
 
 .social {
@@ -1019,6 +1033,13 @@ body {
     }
 }
 
+@media only screen and (min-width: 1158px) {
+    .footer-container {
+        flex-wrap: nowrap;
+        gap: 0;
+    }
+}
+
 .footer-links {
     width: 40px;
     height: 40px;
@@ -1077,7 +1098,6 @@ body {
 @media only screen and (min-width: 768px) {
     .fotter-paragraph {
         display: block;
-
     }
 }
 
@@ -1114,13 +1134,24 @@ body {
 }
 
 .subscr-section {
-    /* margin-left: auto; */
     width: 100%;
+}
+
+@media only screen and (min-width: 1158px) {
+    .subscr-section .footer-social {
+        padding-left: 80px;
+    }
 }
 
 @media only screen and (min-width: 768px) {
     .subscr-section {
-        padding-left: 108px;
+        margin-left: 108px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .subscr-section {
+        margin-left: auto;
     }
 }
 
@@ -1139,12 +1170,17 @@ body {
     }
 }
 
+@media only screen and (min-width: 1158px) {
+    .subscribe-section {
+        justify-content: flex-end;
+    }
+}
+
 .subscribe-email {
     display: block;
     position: relative;
     padding: 8px 16px;
     width: 100%;
-    /* width: 264px; */
     height: 40px;
 
     background: var(--backgr-footer);
