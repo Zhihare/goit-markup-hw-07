@@ -19,6 +19,10 @@
     --z-index-header: 5;
     --z-index-modal: 10;
     --z-index-modal-close: 20;
+
+    --item-rew3: 3;
+    --item-rew2: 2;
+    --item-rew1: 1;
 }
 
 h1,
@@ -1270,15 +1274,46 @@ input::placeholder {
 
 .button-list {
     display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-bottom: 72px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 24px 16px;
+    margin-bottom: 48px;
+}
+
+@media only screen and (min-width: 768px) {
+    .button-list {
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-bottom: 64px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .button-list {
+        margin-bottom: 72px;
+    }
 }
 
 .portfolio {
-    padding-top: 172px;
-    padding-bottom: 120px;
+    padding-top: 118px;
+    padding-bottom: 48px;
 }
+
+@media only screen and (min-width: 768px) {
+    .portfolio {
+        padding-top: 136px;
+        padding-bottom: 96px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .portfolio {
+        padding-top: 172px;
+        padding-bottom: 120px;
+    }
+}
+
+
 
 .portfolio-button {
     padding: 12px 24px;
@@ -1302,6 +1337,14 @@ input::placeholder {
 
 }
 
+@media only screen and (max-width: 768px) {
+    .portfolio-button {
+        padding: 8px 16px;
+    }
+}
+
+
+
 .portfolio-button:hover,
 .portfolio-button:focus {
     background-color: var(--batton-active);
@@ -1318,6 +1361,12 @@ input::placeholder {
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+    .ul-port-list {
+        row-gap: 72px;
+    }
 }
 
 .port-link {
@@ -1365,7 +1414,23 @@ input::placeholder {
 }
 
 .portfolio-lists {
-    width: calc((100% - 48px) / 3);
+    width: calc(100% / var(--item-rew1));
+
+}
+
+@media only screen and (min-width: 768px) {
+    .portfolio-lists {
+        width: calc((100% - var(--item-rew1)*24px) / var(--item-rew2));
+    }
+
+
+}
+
+@media only screen and (min-width: 1158px) {
+    .portfolio-lists {
+        width: calc((100% - var(--item-rew2)*24px) / var(--item-rew3));
+    }
+
 }
 
 .pogr-prod-cards {
@@ -1476,7 +1541,6 @@ input::placeholder {
 .mobile-menu {
     padding: 0;
     margin: 0;
-    list-style: none;
     margin-bottom: auto;
 
     font-weight: 700;
@@ -1491,16 +1555,19 @@ input::placeholder {
     display: block;
     padding: 0;
     color: var(--backgr-main-sect);
-    text-decoration: none;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .mobile-menu-list:last-child {
     margin-bottom: 0;
 }
 
-.mobile-menu-list:hover,
-.mobile-menu-list:focus {
+.link-mob-menu {
+    color: var(--backgr-main-sect);
+}
+
+.link-mob-menu.current {
     color: var(--batton-active);
 }
 
@@ -1524,6 +1591,7 @@ input::placeholder {
     line-height: 1.2;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    color: var(--batton-active);
 }
 
 .mobile-social {
