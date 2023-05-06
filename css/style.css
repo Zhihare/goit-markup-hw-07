@@ -186,7 +186,7 @@ body {
     margin-left: auto;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     .header-adress {
         display: none;
     }
@@ -197,7 +197,7 @@ body {
     gap: 40px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
     .head-list {
         display: none;
     }
@@ -298,15 +298,67 @@ body {
 .main-section-bus {
     max-width: 1440px;
     margin: 0 auto;
-    /* background-color: var(--backgr-main-sect); */
+
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/people1.jpg);
+        url(../images/people1mobile.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 192px;
     padding-bottom: 112px;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 428px) {
+    .main-section-bus {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/people1mobile.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .main-section-bus {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/people1mobile@2x.jpg);
+        }
+    }
+}
+
+@media only screen and (min-width: 429px) and (max-width: 768px) {
+    .main-section-bus {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/people1tablet.jpg);
+    }
+
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .main-section-bus {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/people1tablet@2x.jpg);
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .main-section-bus {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/people1.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+
+        .main-section-bus {
+            background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/people1@x2.jpg);
+
+        }
+    }
+}
+
 
 @media only screen and (min-width: 1158px) {
     .main-section-bus {
@@ -661,6 +713,12 @@ body {
     color: var(--color);
 }
 
+@media only screen and (min-width: 768px) {
+    .list-header {
+        text-align: start;
+    }
+}
+
 @media only screen and (min-width: 1158px) {
     .list-header {
         font-weight: 500;
@@ -697,12 +755,6 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-    .list-paragraph {
-        font-weight: 400;
-    }
-}
-
-@media only screen and (min-width: 1158px) {
     .list-paragraph {
         font-weight: 400;
     }
@@ -1280,6 +1332,14 @@ input::placeholder {
     margin-bottom: 48px;
 }
 
+@media only screen and (min-width: 334px) and (max-width: 768px) {
+    .button-link:nth-child(3n) {
+        margin-right: 50px;
+    }
+
+}
+
+
 @media only screen and (min-width: 768px) {
     .button-list {
         flex-wrap: nowrap;
@@ -1336,6 +1396,8 @@ input::placeholder {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
+
+
 
 @media only screen and (max-width: 768px) {
     .portfolio-button {
