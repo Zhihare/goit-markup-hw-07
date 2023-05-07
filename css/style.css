@@ -204,16 +204,20 @@ body {
 }
 
 .adress-list {
+    padding: 16px 0;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
     display: flex;
     flex-direction: column;
-    gap: 12px
+    gap: 10px
 }
 
 @media only screen and (min-width: 1158px) {
     .adress-list {
         flex-direction: row;
         gap: 40px;
-
+        padding: 0;
     }
 }
 
@@ -280,9 +284,7 @@ body {
     color: var(--batton-active);
 }
 
-.header-line.current::after,
-.header-line:hover::after,
-.header-line:focus::after {
+.header-line.current::after {
     background-color: var(--batton-active);
 }
 
@@ -994,8 +996,14 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 24px;
+    column-gap: 16px;
     row-gap: 72px;
+}
+
+@media only screen and (min-width: 768px) {
+    .castomers-list {
+        column-gap: 24px;
+    }
 }
 
 .castomers-header {
@@ -1011,17 +1019,17 @@ body {
 }
 
 .castomers-list-icons {
-    width: calc((100% - 24px)/2);
+    width: calc((100% - 16px)/2);
     height: 88px;
 }
 
 @media only screen and (min-width: 768px) {
     .castomers-list-icons {
-        width: calc((100% - 24px*2)/3);
+        width: 168px;
     }
 }
 
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 1156px) {
     .castomers-list-icons {
         width: calc((100% - 24px*5)/6);
     }
@@ -1119,6 +1127,10 @@ body {
 }
 
 .footer-link {
+    display: block;
+    margin-bottom: 17px;
+    text-align: center;
+
     color: var(--color-batton);
     font-family: "Raleway", sans-serif;
     font-weight: 800;
@@ -1128,6 +1140,13 @@ body {
     text-transform: uppercase;
     text-decoration: none;
 }
+
+@media only screen and (min-width: 768px) {
+    .footer-link {
+        text-align: start;
+    }
+}
+
 
 .footer-link span {
     color: var(--span-footer-cl);
@@ -1141,10 +1160,6 @@ body {
 }
 
 .fotter-paragraph {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
     width: 268px;
     line-height: 1.5;
     font-size: 16px;
@@ -1332,13 +1347,6 @@ input::placeholder {
     margin-bottom: 48px;
 }
 
-@media only screen and (min-width: 334px) and (max-width: 767px) {
-    .button-link:nth-child(3n) {
-        margin-right: 50px;
-    }
-
-}
-
 
 @media only screen and (min-width: 768px) {
     .button-list {
@@ -1369,7 +1377,7 @@ input::placeholder {
 @media only screen and (min-width: 1158px) {
     .portfolio {
         padding-top: 172px;
-        padding-bottom: 120px;
+        padding-bottom: 72px;
     }
 }
 
@@ -1649,6 +1657,7 @@ input::placeholder {
 }
 
 .mobile-contacts .tel {
+    font-weight: 700;
     font-size: 36px;
     line-height: 1.2;
     letter-spacing: 0.02em;
